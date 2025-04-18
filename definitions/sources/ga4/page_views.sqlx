@@ -1,0 +1,15 @@
+config {//The config block specifies that we want to create a table named "dataform_sources".
+type: "table", //specifies that the query should create a table. Other options include "view" for creating views, or "incremental" for incremental table updates.
+schema: "dataform_sources",  //This sets the name of the destination table in BigQuery
+}
+
+SELECT
+event_timestamp,
+user_pseudo_id,
+${helpers.getEventParam('page_location')},
+${helpers.getEventParam('page_referrer')},
+${helpers.getEventParam('ga_session_id','int')},
+FROM
+${ref(constants.GA4_TABLE)} /*the ref table is taken from sources.js,The ${ref()} function is used to reference other tables or views in your project.*/
+WHERE
+event_name = 'page_view'
