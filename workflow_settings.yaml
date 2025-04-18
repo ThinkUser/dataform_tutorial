@@ -1,21 +1,6 @@
-<<<<<<< HEAD
 defaultProject: erez-bigquery
 defaultLocation: me-west1
 defaultDataset: dataform
 defaultAssertionDataset: dataform_assertions
 dataformCoreVersion: 3.0.0
-=======
-<<<<<<< HEAD
-defaultProject: erez-bigquery
-defaultLocation: me-west1
-defaultDataset: dataform
-defaultAssertionDataset: dataform_assertions
-dataformCoreVersion: 3.0.0
-=======
-defaultProject: erez-bigquery
-defaultLocation: me-west1
-defaultDataset: dataform
-defaultAssertionDataset: dataform_assertions
-dataformCoreVersion: 3.0.0
->>>>>>> refs/heads/main
->>>>>>> refs/heads/main
+

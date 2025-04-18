@@ -1,7 +1,0 @@
-{
-  "defaultSchema": "your_default_schema",
-  "assertionSchema": "dataform_assertions",
-  "warehouse": "bigquery",
-  "defaultDatabase": "thinkuser-clients",
-  "defaultLocation": "me-west1"
-}
