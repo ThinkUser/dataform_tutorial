@@ -1,0 +1,20 @@
+config {
+  type: "table",
+  schema: "output",
+  name: "summary_report",
+  bigquery: {
+    partitionBy: "ride_date",
+    clusterBy: ["bike_id", "start_station"]
+  }
+
+}
+
+SELECT
+  d.ride_date,
+  d.bike_id,
+  d.total_rides,
+  s.station_id AS start_station,
+  e.station_id AS end_station
+FROM ${ref("daily_cycle_usage")} d
+LEFT JOIN ${ref("station_usage")} s ON d.bike_id = s.station_id
+LEFT JOIN ${ref("station_usage")} e ON d.bike_id = e.station_id

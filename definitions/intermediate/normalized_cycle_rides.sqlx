@@ -1,0 +1,22 @@
+config {
+  type: "table",
+  schema: "intermediate",
+  name: "normalized_cycle_rides"
+}
+
+-- In the above config, if schema is not mentioned the table will be created under default dataset mentioned in the workflow_settings.yml.
+-- If the name is not mentioned then the table will be created as same as the file name. 
+-- It is good practice to keep the tables names same as your file names.
+
+SELECT
+  rental_id,
+  bike_id,
+  start_station_id,
+  end_station_id,
+  TIMESTAMP_DIFF(end_date, start_date, SECOND) AS ride_duration_seconds,
+  start_date,
+  end_date
+
+FROM ${ref("cycle_hire")}
+
+
