@@ -1,9 +1,10 @@
-config {
+/*config {
   type: "declaration",
   database: "bigquery-public-data",
   schema: "london_bicycles",
   name: "cycle_hire",
   description: "Cycle Hire Data"
 }
+*/
 
 

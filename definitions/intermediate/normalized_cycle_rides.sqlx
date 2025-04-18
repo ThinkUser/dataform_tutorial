@@ -16,7 +16,6 @@ SELECT
   TIMESTAMP_DIFF(end_date, start_date, SECOND) AS ride_duration_seconds,
   start_date,
   end_date
-
 FROM ${ref("cycle_hire")}
 
 
