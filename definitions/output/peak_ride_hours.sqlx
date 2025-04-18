@@ -1,0 +1,13 @@
+config {
+  type: "view",
+  schema: "output",
+  name: "peak_ride_hours"
+}
+
+SELECT
+  EXTRACT(HOUR FROM start_date) AS hour_of_day,
+  COUNT(*) AS ride_count
+
+FROM ${ref("normalized_cycle_rides")}
+GROUP BY 1
+ORDER BY ride_count DESC

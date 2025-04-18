@@ -1,0 +1,13 @@
+config {
+  type: "table",
+  schema: "intermediate",
+  name: "daily_cycle_usage"
+}
+
+SELECT
+  DATE(start_time) AS ride_date,
+  bike_id,
+  COUNT(*) AS total_rides
+
+FROM ${ref("normalized_cycle_rides")}
+GROUP BY 1, 2
