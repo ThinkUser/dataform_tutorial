@@ -1,0 +1,5 @@
+config { type: "table" }
+
+SELECT *,
+    ${functions.customerSegment("value")} AS segment
+FROM ${ref("customer_data")}

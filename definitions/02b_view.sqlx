@@ -1,0 +1,4 @@
+config { type: "view" }
+
+SELECT * EXCEPT(value)
+FROM ${ref("02a_table_ref")}

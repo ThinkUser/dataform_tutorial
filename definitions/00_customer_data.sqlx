@@ -1,0 +1,5 @@
+config {
+  type:   "declaration",
+  schema: "tutorials",               // BigQuery dataset
+  name:   "customer_data"           // BigQuery table
+}

@@ -1,0 +1,5 @@
+defaultProject: erez-bigquery
+defaultLocation: me-west1
+defaultDataset: tutorials
+defaultAssertionDataset: dataform_assertions
+dataformCoreVersion: 3.0.0

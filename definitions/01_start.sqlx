@@ -1,0 +1,13 @@
+config {
+    type: "table"
+}
+
+SELECT *,
+    CASE
+        WHEN value > 800000 THEN "platinum"
+        WHEN value > 600000 THEN "gold"
+        WHEN value > 300000 THEN "silver"
+    ELSE
+        "bronze"
+    END AS segment
+FROM `tutorials.customer_data` 
